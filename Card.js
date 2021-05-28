@@ -10,6 +10,7 @@ const open = require("open");
 const fs = require("fs");
 // const request = require("request");
 const path = require("path");
+const { gray } = require("chalk");
 // const ora = require("ora");
 // const cliSpinners = require("cli-spinners");
 
@@ -24,10 +25,9 @@ const {
     twitter_username,
     linkedin_username,
     github_username,
-    // personal_site,
+    blog_username,
     npx_card_handle,
     job_title,
-    // resume_url,
 } = user_data;
 
 const prompt = inquirer.createPromptModule();
@@ -40,10 +40,10 @@ const questions = [
         choices: [
             //// Send an email
             {
-                name: `Send me an ${chalk.green.bold("email")}?`,
+                name: `Say 👋, on my ${chalk.green.bold("Email")}?`,
                 value: () => {
                     open(`mailto:${user_email}`);
-                    console.log("\nDone, see you soon at inbox.\n");
+                    console.log("\nOpening you Email application. See you at my Inbox\n");
                 },
             },
             
@@ -51,7 +51,7 @@ const questions = [
             {
                 name: "Quit.",
                 value: () => {
-                    console.log("🥺 Have a nice Day.\n");
+                    console.log("🥺 Have a nice Day. Although You can support thr project by giving a ⭐.\n");
                 },
             },
         ],
@@ -59,18 +59,22 @@ const questions = [
 ];
 
 const data = {
-    name: chalk.bold.green(`                  ${user_name}+"/"+ ${npx_card_handle}`),
-    // work: `${chalk.white("Software Engineer at")} ${chalk.hex("#2b82b2").bold("ClearTax")}`,
-    work: `${chalk.white(`${job_title}`)}`,
-    twitter: chalk.gray("https://twitter.com/") + chalk.cyan(`${twitter_username}`),
+    name: chalk.bold.green(`                  ${user_name} / ${npx_card_handle}`),
+    // You can Style the Job titile if You can, As I did.
+    // You can also keep it simple by replacing the Line 65 by:
+    // work: `${chalk.white(`{job_title}`)}`
+    work:  `${chalk.white("Project Engineer at")} ${chalk.bold.hex("#2b82b2").bold("Wipro Ltd")}`,
+    twitter: chalk.gray("https://twitter.com/") + chalk.yellowBright(`${twitter_username}`),
     github: chalk.gray("https://github.com/") + chalk.green(`${github_username}`),
-    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue(`${linkedin_username}`),
-    npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
+    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blueBright(`${linkedin_username}`),
+    Blogs: chalk.gray("https://medium.com/@") + chalk.redBright(`${blog_username}`),
+    npx: chalk.green("npx") + " " + chalk.white(`${npx_card_handle}`),
 
     labelWork: chalk.white.bold("       Work:"),
     labelTwitter: chalk.white.bold("    Twitter:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
     labelLinkedIn: chalk.white.bold("   LinkedIn:"),
+    labelBlogs: chalk.white.bold("      Blogs:"),
     labelCard: chalk.white.bold("       Card:"),
 };
 
@@ -83,18 +87,24 @@ const me = boxen(
         `${data.labelTwitter}  ${data.twitter}`,
         `${data.labelGitHub}  ${data.github}`,
         `${data.labelLinkedIn}  ${data.linkedin}`,
+        `${data.labelBlogs}  ${data.Blogs}`,
         ``,
         `${data.labelCard}  ${data.npx}`,
         ``,
         `${chalk.italic("Hey! I'm Vidit, I am working with Wipro Ltd as a Project Engineer")}`,
-        `${chalk.italic("I love to connect with new people, Say 'Hii' Social Media or E-mail")}`,
+        `${chalk.italic("I love to connect with new people, Say 'Hii' via Social Media or E-mail")}`,
     ].join("\n"),
     {
         margin: 1,
         float: "center",
         padding: 1,
-        borderStyle: "single",
-        borderColor: "green",
+        borderStyle: "singleDouble",
+        borderColor: "blue",
+        align:"left",
+        backgroundColor: "#660033",
+        
+
+        
     }
 );
 
