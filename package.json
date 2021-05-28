@@ -1,0 +1,33 @@
+{
+  "name": "imvv",
+  "version": "1.0.1",
+  "description": "This is the Profile Card for Vidit Varshney (imvv).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viditvarshney/CLI_ProfileCard.git"
+  },
+  "keywords": [
+    "profile-card",
+    "card",
+    "businessCard",
+    "socialCard"
+  ],
+  "author": "Vidit Varshney <viditvarshney222@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viditvarshney/CLI_ProfileCard/issues"
+  },
+  "homepage": "https://github.com/viditvarshney/CLI_ProfileCard#readme",
+  "dependencies": {
+    "boxen": "^5.0.1",
+    "chalk": "^4.1.1",
+    "clear": "^0.1.0",
+    "inquirer": "^8.1.0",
+    "open": "^8.2.0",
+    "request": "^2.88.2"
+  }
+}
