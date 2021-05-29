@@ -13,7 +13,6 @@ const path = require("path");
 const { gray } = require("chalk");
 const Ora = require("ora");
 
-const loader = require("./load");
 
 
 
