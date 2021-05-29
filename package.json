@@ -2,11 +2,11 @@
   "name": "imvv",
   "version": "1.1.1",
   "description": "This is the Profile Card for Vidit Varshney (imvv).",
-  "main": "card.js",
-  "bin": "./card.js",
+  "main": "node load.js && card.js",
+  "bin": "./load.js && ./card.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./card.js"
+    "dev": "node ./load.js && node ./card.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "clear": "^0.1.0",
     "inquirer": "^8.1.0",
     "open": "^8.2.0",
+    "ora": "^5.4.0",
     "request": "^2.88.2"
   }
 }

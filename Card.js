@@ -12,7 +12,10 @@ const fs = require("fs");
 const path = require("path");
 const { gray } = require("chalk");
 // const ora = require("ora");
+const { loadavg } = require("os");
 // const cliSpinners = require("cli-spinners");
+
+
 
 clear();
 
@@ -51,7 +54,7 @@ const questions = [
             {
                 name: "Quit.",
                 value: () => {
-                    console.log("🥺 Have a nice Day. Although You can support thr project by giving a ⭐.\n");
+                    console.log(" Have a nice Day. Although You can support the project by giving a ⭐.\n");
                 },
             },
         ],
@@ -108,6 +111,12 @@ const me = boxen(
     }
 );
 
+
 console.log(me);
+
+
+
+
+
 
 prompt(questions).then(answer => answer.action());
