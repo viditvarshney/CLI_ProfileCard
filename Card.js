@@ -11,9 +11,9 @@ const fs = require("fs");
 // const request = require("request");
 const path = require("path");
 const { gray } = require("chalk");
-// const ora = require("ora");
-const { loadavg } = require("os");
-// const cliSpinners = require("cli-spinners");
+const Ora = require("ora");
+
+const loader = require("./load");
 
 
 
@@ -54,7 +54,7 @@ const questions = [
             {
                 name: "Quit.",
                 value: () => {
-                    console.log(" Have a nice Day. Although You can support the project by giving a ⭐.\n");
+                    console.log(" Have a nice Day. Although You can support the project by giving a Star ⭐.\n");
                 },
             },
         ],
@@ -110,13 +110,63 @@ const me = boxen(
         
     }
 );
+function CardPrinter() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(console.log(me));
+      }, 12000);
+    });
+}
+
+// Animation 
+
+function Loaded() {
+
+    const spinner = Ora('Welcome in Cli World').start();
+
+    setTimeout(() => {
+        spinner.indent = 30;
+        spinner.spinner = 'soccerHeader';
+        spinner.text = `${chalk.green('Support Project by giving a Star ⭐ ')}`;
+    }, 2000);
+    
+    setTimeout(() => {
+        spinner.indent = 30;
+        spinner.spinner = 'soccerHeader';
+        spinner.text = `${chalk.yellow('Card sent to Press...')}`; 
+    }, 4000);
+    
+    setTimeout(() => {
+        spinner.indent = 30;
+        spinner.spinner = 'soccerHeader';
+        spinner.text = `${chalk.magentaBright('Card is Ready for Printing...')}`; 
+    }, 6000);
+    
+    setTimeout(() => {
+        spinner.indent = 30;
+        spinner.spinner = 'soccerHeader';
+        spinner.text = 'Your Card is About to Ready...'; 
+    }, 8000);
+    
+    setTimeout(() => {
+        spinner.indent = 30;
+        spinner.spinner = 'soccerHeader';
+        spinner.text = `${chalk.blueBright('Printing Done, Here We go:')}`; 
+    }, 10000);
+    
+    setTimeout(() => {
+        spinner.succeed(`${chalk.greenBright('Congratulations, Now you have a Identity in CLI World.😄')}`);
+    }, 12000);
+    
+    
+
+};
 
 
-console.log(me);
 
-
-
-
-
-
-prompt(questions).then(answer => answer.action());
+async function Card() {
+    Loaded();
+    const card = await CardPrinter();
+    prompt(questions).then(answer => answer.action());
+}
+Card();
