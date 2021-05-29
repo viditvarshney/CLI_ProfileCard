@@ -1,6 +1,6 @@
 {
   "name": "imvv",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "This is the Profile Card for Vidit Varshney (imvv).",
   "main": "node load.js && card.js",
   "bin": "node ./load.js && node ./card.js",
