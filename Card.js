@@ -10,7 +10,6 @@ const open = require("open");
 const fs = require("fs");
 // const request = require("request");
 const path = require("path");
-const { gray } = require("chalk");
 const Ora = require("ora");
 
 
@@ -40,12 +39,20 @@ const questions = [
         name: "action",
         message: "What you want to do?",
         choices: [
-            //// Send an email
+            // Tweet About the Project
+            {
+                name: `Share Your Card and Tell Others: `,
+                value: () => {
+                    open(`https://twitter.com/intent/tweet?text=I created my Profile Card. Run npx ${npx_card_handle} to view. Make Your own at: https://github.com/viditvarshney/CLI_ProfileCard Love this Project by @_imvv` );
+                    console.log("\nRedirecting You...\n");
+                },
+            },
+            // Send an email
             {
                 name: `Say 👋, on my ${chalk.green.bold("Email")}?`,
                 value: () => {
                     open(`mailto:${user_email}`);
-                    console.log("\nOpening you Email application. See you at my Inbox\n");
+                    console.log("\nOpening your Email application. See you at my Inbox\n");
                 },
             },
             
@@ -53,10 +60,10 @@ const questions = [
 
             // Reaction Timer Game
             {
-                name: `Play ${chalk.green.bold("Reaction Timer")}?`,
+                name: `Play ${chalk.yellow.bold("Reaction Timer")}?`,
                 value: () => {
                     open(`https://viditvarshney.github.io/Reaction-Timer.github.io/`);
-                    console.log("\nLoading the Game\n");
+                    console.log("\nLoading the Game...\n");
                 },
             },
             //// Quit
