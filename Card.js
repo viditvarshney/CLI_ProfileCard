@@ -49,6 +49,16 @@ const questions = [
                 },
             },
             
+            // Here you can add your Projects, Games or any showcase Project
+
+            // Reaction Timer Game
+            {
+                name: `Play ${chalk.green.bold("Reaction Timer")}?`,
+                value: () => {
+                    open(`https://viditvarshney.github.io/Reaction-Timer.github.io/`);
+                    console.log("\nLoading the Game\n");
+                },
+            },
             //// Quit
             {
                 name: "Quit.",
