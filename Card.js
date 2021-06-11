@@ -39,9 +39,9 @@ const questions = [
         name: "action",
         message: "What you want to do?",
         choices: [
-            // Tweet About the Project
+            // Share Your profile Card
             {
-                name: `Share Your Card and Tell Others: `,
+                name: `Share Your ${chalk.cyanBright.bold("Profile Card")} and Tell Others: `,
                 value: () => {
                     open(`https://twitter.com/intent/tweet?text=I created my Profile Card. Run npx ${npx_card_handle} to view. Make Your own at: https://github.com/viditvarshney/CLI_ProfileCard Love this Project by @_imvv` );
                     console.log("\nRedirecting You...\n");
