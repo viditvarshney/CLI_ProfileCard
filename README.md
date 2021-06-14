@@ -44,6 +44,21 @@ All contributions are welcome. Please refer [CONTRIBUTING.md](https://github.com
 <br>
 
 ***
+
+<br>
+
+# Screenshots
+
+![animations](/assets/screenshots/2.png)
+<br>
+
+![animations](/assets/screenshots/3.png)
+<br>
+
+![animations](/assets/screenshots/1.png)
+
+<br>
+
 # Credits: 
 This Project is inspired from
 [Project link](https://github.com/bnb/bitandbang)
