@@ -49,13 +49,26 @@ All contributions are welcome. Please refer [CONTRIBUTING.md](https://github.com
 
 # Screenshots
 
-![animations](/assets/screenshots/2.png)
+![animations](screenshots/0.png)
+
+
+![animations](screenshots/4.png)
+
+
+![animations](screenshots/5.png)
+
+
+![animations](screenshots/2.png)
+
 <br>
 
-![animations](/assets/screenshots/3.png)
+![animations](screenshots/6.png)
+
+
+![animations](screenshots/3.png)
 <br>
 
-![animations](/assets/screenshots/1.png)
+![animations](screenshots/1.png)
 
 <br>
 
